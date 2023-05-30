@@ -1,25 +1,33 @@
-var input = prompt("Enter first number : ");
-var num1 = parseInt(input);
 
-var num2 = parseInt(prompt("Enter second number : "));
-var LineBreak = "<br/>";
-//integer = 정수형 변수.  prompt <- 문자
-//ParseInt 정수로 변환. 정수형이 아니면 NaN 출력
+var base = parseFloat(prompt("밑변 입력 : "));
+var height = parseFloat(prompt("높이 입력 : "));
 
-var result = num1 + num2;
-document.write("the sum is : " + result + LineBreak);
+var area = base * height * 0.5;
 
-var result = num1 - num2;
-document.write("the sub is : " + result + LineBreak);
+document.write("삼각형의 넓이 : " + area);
 
-var result = num1 * num2;
-document.write("the multiplication is : " + result + LineBreak);
-
-var result = num1 / num2;
-document.write("the division is : " + result + LineBreak);
-
-var result = num1 % num2;
-document.write("the remainder is : " + result + LineBreak);
+//var input = prompt("Enter first number : ");
+//var num1 = parseInt(input);
+//
+//var num2 = parseInt(prompt("Enter second number : "));
+//var LineBreak = "<br/>";
+////integer = 정수형 변수.  prompt <- 문자
+////ParseInt 정수로 변환. 정수형이 아니면 NaN 출력
+//
+//var result = num1 + num2;
+//document.write("the sum is : " + result + LineBreak);
+//
+//var result = num1 - num2;
+//document.write("the sub is : " + result + LineBreak);
+//
+//var result = num1 * num2;
+//document.write("the multiplication is : " + result + LineBreak);
+//
+//var result = num1 / num2;
+//document.write("the division is : " + result + LineBreak);
+//
+//var result = num1 % num2;
+//document.write("the remainder is : " + result + LineBreak);
 
 //var num = "20";
 //num = num.toString(); //메소드
