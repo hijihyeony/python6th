@@ -1,19 +1,33 @@
-var lastName = "홍";
-var firstName = "길동";
+var text = prompt("Enter your name:");
+document.write("Your name : " + text + "<br/>");
 
-var fullName = lastName + firstName;
+var len =text.length;
+document.write("Number of characters : " + len + "<br/>");
 
-console.log(fullName);
-console.log("Today is " + "a "+"beautiful day");
-console.log("My name is "+ fullName);
+document.write(text.charAt(2) + "<br/>"); //두번째에 있는 문자 하나 가져오는 함수
+//0부터 시작함
 
-var num1 = 20;
-var num2 = 30;
-var sum = num1 + num2;
-console.log(num1 + num2);
-console.log("" + num1 + num2); //num1, num2 문자열 취급
-console.log(num1 + " + " + num2 + " = " + sum);
 
+document.write(text.toUpperCase() + "<br/>");
+document.write(text.toLowerCase() + "<br/>");
+//대,소문자로 변환하는 함수
+
+
+//var lastName = "홍";
+//var firstName = "길동";
+//
+//var fullName = lastName + firstName;
+//
+//console.log(fullName);
+//console.log("Today is " + "a "+"beautiful day");
+//console.log("My name is "+ fullName);
+//
+//var num1 = 20;
+//var num2 = 30;
+//var sum = num1 + num2;
+//console.log(num1 + num2);
+//console.log("" + num1 + num2); //num1, num2 문자열 취급
+//console.log(num1 + " + " + num2 + " = " + sum);
 
 
 //var name = "이승훈";
