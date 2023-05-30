@@ -12,6 +12,17 @@ document.write(text.toUpperCase() + "<br/>");
 document.write(text.toLowerCase() + "<br/>");
 //대,소문자로 변환하는 함수
 
+var text1 = " hi";
+var text2 = "bye";
+var text3 = text1.concat(text2);
+var text4 = text1 + text2;
+document.write(text3 + "<br/>");
+document.write(text4 + "<br/>");
+
+var text4 = "hello";
+var result = text4.slice(0,2); //문자열의 부분 잘라주는 함수
+document.write(result + "<br/>");
+
 
 //var lastName = "홍";
 //var firstName = "길동";
