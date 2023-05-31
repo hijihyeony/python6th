@@ -1,10 +1,47 @@
 
-var base = parseFloat(prompt("밑변 입력 : "));
-var height = parseFloat(prompt("높이 입력 : "));
+var num1 = 20;
+var num2 = 10;
+var num3 = "10";
+var num4 = 20;
+var num5 = 15;
 
-var area = base * height * 0.5;
+console.log('일반 크기 비교');
+console.log(num1 > num2, num1, '>', num2);
+console.log(num1 >= num2, num1, '>=', num2);
+console.log(num1 < num2, num1, '<', num2);
+console.log(num1 <= num2, num1, '<=', num2);
 
-document.write("삼각형의 넓이 : " + area);
+console.log('같은지 여부 확인');
+console.log(num1 == num4, num1, '==', num4); // == : 비교 연산자 같다 (값 비교)
+console.log(num1 != num4, num1, '!=', num4); // != : 같지 않다 (! : ~이 아니다)
+
+console.log('===');
+console.log(num1 === num3, num1, '===', num3); // === : 타입이 같다
+console.log(num2 === num3, num2, '===', num3);
+console.log(num2 == num3, num2, '==', num3);
+
+console.log('논리 연산자');
+console.log('num1 > num2 && num1 < num5', num1 > num2 && num1 < num5);
+// And 연산자 : 둘다 참이어야 참
+console.log('num1 > num2 || num1 < num5', num1 > num2 || num1 < num5);
+// Or 연산자 : 둘 중에 하나만 참이어도 참
+console.log('num1 > num2 && !(num1 < num5)', num1 > num2 && !(num1 < num5));
+// Or 연산자 : 둘 중에 하나만 참이어도 참
+
+
+
+//var cels =parseFloat(prompt("섭씨 입력: ")); //Float = 소수점이 있는 수
+//var farn = cels * (9 / 5) + 32; //섭씨 온도 화씨 온도로 변환
+//
+//document.write("화씨 : " + farn);
+
+
+//var base = parseFloat(prompt("밑변 입력 : "));
+//var height = parseFloat(prompt("높이 입력 : "));
+//
+//var area = base * height * 0.5;
+//
+//document.write("삼각형의 넓이 : " + area);
 
 //var input = prompt("Enter first number : ");
 //var num1 = parseInt(input);
@@ -105,10 +142,6 @@ document.write("삼각형의 넓이 : " + area);
 //document.write("이름 : " + name + lineBreak);
 //document.write("나이 : " + age + lineBreak);
 //document.write("학점 : " + cgpa + lineBreak);
-
-
-
-
 
 
 
