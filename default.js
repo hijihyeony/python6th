@@ -1,17 +1,39 @@
 
-var i = 1;
-
-do { //한번 먼저 실행
-    document.write("멋쟁이사자 i : " + i++ + "<br/>");
-} while (i <1)
-
-document.write("==============<br/>")
-
-var j = 1;
-
-while(j < 1){ //조건 먼저
-        document.write("멋쟁이사자 j : " + j++ + "<br/>");
+//break와 continue 이해하기
+//19까지 출력
+for(var i=1; i<=100; i++){
+    if(i==20){
+        break;
+    }
+    document.write(i + "<br/>");
 }
+
+document.write("=============<br/>")
+
+//continue 사용
+//조건이 부합할 때 loof를 잠깐 빠져나감 - 19다음 20건너뛰고 21
+for(var k=1; k<=100; k++){
+    if(k==20){
+        continue;
+    }
+    document.write(k + "<br/>")
+}
+
+
+
+//var i = 1;
+//
+//do { //한번 먼저 실행
+//    document.write("멋쟁이사자 i : " + i++ + "<br/>");
+//} while (i <1)
+//
+//document.write("==============<br/>")
+//
+//var j = 1;
+//
+//while(j < 1){ //조건 먼저
+//        document.write("멋쟁이사자 j : " + j++ + "<br/>");
+//}
 
 //var digit = parseInt(prompt("숫자 입력 :"));
 //
