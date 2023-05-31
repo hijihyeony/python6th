@@ -1,36 +1,88 @@
 
-var num1 = parseInt(prompt('첫번째 숫자 입력 : '));
-var num2 = parseInt(prompt('두번째 숫자 입력 : '));
+var digit = parseInt(prompt("숫자 입력 :"));
+
+switch(digit){ //일치하는 곳에서부터 break문이 나올때까지 실행됨
+    case 0:
+        document.write("Zero");
+    case 1:
+        document.write("One");
+    case 0:
+        document.write("Zero");
+    case 2:
+        document.write("Two");
+        break;
+    case 3:
+        document.write("Three");
+        break;
+    case 4:
+        document.write("Four");
+        break;
+    case 5:
+        document.write("Five");
+        break;
+    case 6:
+        document.write("Six");
+        break;
+    case 7:
+        document.write("Seven");
+        break;
+    case 8:
+        document.write("Eight");
+        break;
+    case 9:
+        document.write("Nine");
+        break;
+    default:
+        document.write("Not a digit");
+        break;
+}
 
 
-//if로만 표현 - 매번 실행
-if(num1 > num2) {
-    console.log("큰 수는 num1 : " + num1);
-}
-if(num1 < num2) {
-    console.log("큰 수는 num2 : " + num2);
-}
-if(num1 == num2) {
-    console.log("같은 수");
-}
 
-//else if 사용 - 참일 때 까지만 실행 - 효율적
-if(num1 > num2) {
-    console.log("큰 수는 num1 : " + num1);
-} else if (num1 < num2) {
-    console.log("큰 수는 num2 : " + num2);
-} else if (num1 == num2) {
-    console.log("같은 수");
-}
+//var letter = prompt("Enter a letter : ");
+//letter = letter.toLowerCase(); //메서드
+//
+//if(letter=='a' || letter == 'e' || letter =='i' || letter=='o' || letter=='u') {
+//    console.log('Vowel');
+//} else {
+//    console.log('Consonant');
+//}
 
-//else 사용 : 예외 조건에 대한 대비
-if(num1 > num2) {
-    console.log("큰 수는 num1 : " + num1);
-} else if (num1 < num2) {
-    console.log("큰 수는 num2 : " + num2);
-} else {
-    console.log("같은 수");
-}
+
+
+
+//var num1 = parseInt(prompt('첫번째 숫자 입력 : '));
+//var num2 = parseInt(prompt('두번째 숫자 입력 : '));
+//
+//
+////if로만 표현 - 매번 실행
+//if(num1 > num2) {
+//    console.log("큰 수는 num1 : " + num1);
+//}
+//if(num1 < num2) {
+//    console.log("큰 수는 num2 : " + num2);
+//}
+//if(num1 == num2) {
+//    console.log("같은 수");
+//}
+//
+////else if 사용 - 참일 때 까지만 실행 - 효율적
+//if(num1 > num2) {
+//    console.log("큰 수는 num1 : " + num1);
+//} else if (num1 < num2) {
+//    console.log("큰 수는 num2 : " + num2);
+//} else if (num1 == num2) {
+//    console.log("같은 수");
+//}
+//
+////else 사용 : 예외 조건에 대한 대비
+//if(num1 > num2) {
+//    console.log("큰 수는 num1 : " + num1);
+//} else if (num1 < num2) {
+//    console.log("큰 수는 num2 : " + num2);
+//} else {
+//    console.log("같은 수");
+//}
 
 
 
