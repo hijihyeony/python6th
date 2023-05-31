@@ -1,20 +1,53 @@
 
-//IIFE(즉시실행함수) 예제
+var names = new Array(20);
 
-(function display(message){
-    console.log(message);
-})("hi");
+names[0] = "지훈";
+names[1] = "은영";
 
-var display2 = function displayMessage(msg){
-    console.log(msg);
-}
+console.log(names[1]);
 
-display2("I am message");
+//값을 가진 배열 생성하기
+var students = ["지훈", "은영", "수진", "준호"];
+console.log("students = " + students);
+console.log("2번째 인덱스의 학생: ", students[2]);
 
-(function addNumbers(a, b){
-    console.log(a + b);
-})(3, 4ㅂ);
-//선언과 동시에 실행이 되는 함수
+//배열의 길이 찾기
+console.log("학생 배열의 길이: ", students.length);
+
+//배열의 요소 추가하기
+students.push("정만");
+console.log("push 후 학생 배열 = " + students);
+
+//배열의 요소 삭제하기
+var element = students.pop(); //배열의 마지막 요소 뺌
+console.log(element);
+console.log("pop 후 학생 배열 = " + students);
+
+//배열 연결하기
+var numArray1 = [10, 20];
+var numArray2 = [30, 40, 50, 60];
+var numArray = numArray1.concat(numArray2);
+
+console.log("배열 잇기(concatenation) : " + numArray);
+
+console.log(numArray1 + numArray2);
+
+////IIFE(즉시실행함수) 예제
+//
+//(function display(message){
+//    console.log(message);
+//})("hi");
+//
+//var display2 = function displayMessage(msg){
+//    console.log(msg);
+//}
+//
+//display2("I am message");
+//
+//(function addNumbers(a, b){
+//    console.log(a + b);
+//})(3, 4ㅂ);
+////선언과 동시에 실행이 되는 함수
 
 
 ////함수
