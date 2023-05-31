@@ -1,25 +1,73 @@
 
-//break와 continue 이해하기
-//19까지 출력
-for(var i=1; i<=100; i++){
-    if(i==20){
-        break;
-    }
-    document.write(i + "<br/>");
+//IIFE(즉시실행함수) 예제
+
+(function display(message){
+    console.log(message);
+})("hi");
+
+var display2 = function displayMessage(msg){
+    console.log(msg);
 }
 
-document.write("=============<br/>")
+display2("I am message");
 
-//continue 사용
-//조건이 부합할 때 loof를 잠깐 빠져나감 - 19다음 20건너뛰고 21
-for(var k=1; k<=100; k++){
-    if(k==20){
-        continue;
-    }
-    document.write(k + "<br/>")
-}
+(function addNumbers(a, b){
+    console.log(a + b);
+})(3, 4ㅂ);
+//선언과 동시에 실행이 되는 함수
 
 
+////함수
+//
+////매개변수가 없는 함수
+//
+//function message(){
+//    document.write("Hello, I am a function without parameter<br/>");
+//}
+//
+//function welcomeMessage(){
+//    document.write("Welcome" + name + "<br/>");
+//}
+//
+////여러 개의 매개변수를 가진 함수 생성하기
+//function addition(num1, num2){
+//    var sum = num1 + num2;
+//    document.write("addition is " + sum + "<br/>");
+//}
+//
+////값을 반환하는 함수 생성하기
+//function square(num) {
+//    return num * num;
+//}
+//
+//
+//message();
+//welcomeMessage();
+//addition(2, 3);
+//document.write("square of 5 is " + square(5) + "<br/>");
+
+
+
+
+////break와 continue 이해하기
+////19까지 출력
+//for(var i=1; i<=100; i++){
+//    if(i==20){
+//        break;
+//    }
+//    document.write(i + "<br/>");
+//}
+//
+//document.write("=============<br/>")
+//
+////continue 사용
+////조건이 부합할 때 loof를 잠깐 빠져나감 - 19다음 20건너뛰고 21
+//for(var k=1; k<=100; k++){
+//    if(k==20){
+//        continue;
+//    }
+//    document.write(k + "<br/>")
+//}
 
 //var i = 1;
 //
