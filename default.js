@@ -1,41 +1,55 @@
 
-var digit = parseInt(prompt("숫자 입력 :"));
+var i = 1;
 
-switch(digit){ //일치하는 곳에서부터 break문이 나올때까지 실행됨
-    case 0:
-        document.write("Zero");
-    case 1:
-        document.write("One");
-    case 0:
-        document.write("Zero");
-    case 2:
-        document.write("Two");
-        break;
-    case 3:
-        document.write("Three");
-        break;
-    case 4:
-        document.write("Four");
-        break;
-    case 5:
-        document.write("Five");
-        break;
-    case 6:
-        document.write("Six");
-        break;
-    case 7:
-        document.write("Seven");
-        break;
-    case 8:
-        document.write("Eight");
-        break;
-    case 9:
-        document.write("Nine");
-        break;
-    default:
-        document.write("Not a digit");
-        break;
+do { //한번 먼저 실행
+    document.write("멋쟁이사자 i : " + i++ + "<br/>");
+} while (i <1)
+
+document.write("==============<br/>")
+
+var j = 1;
+
+while(j < 1){ //조건 먼저
+        document.write("멋쟁이사자 j : " + j++ + "<br/>");
 }
+
+//var digit = parseInt(prompt("숫자 입력 :"));
+//
+//switch(digit){ //일치하는 곳에서부터 break문이 나올때까지 실행됨
+//    case 0:
+//        document.write("Zero");
+//    case 1:
+//        document.write("One");
+//    case 0:
+//        document.write("Zero");
+//    case 2:
+//        document.write("Two");
+//        break;
+//    case 3:
+//        document.write("Three");
+//        break;
+//    case 4:
+//        document.write("Four");
+//        break;
+//    case 5:
+//        document.write("Five");
+//        break;
+//    case 6:
+//        document.write("Six");
+//        break;
+//    case 7:
+//        document.write("Seven");
+//        break;
+//    case 8:
+//        document.write("Eight");
+//        break;
+//    case 9:
+//        document.write("Nine");
+//        break;
+//    default:
+//        document.write("Not a digit");
+//        break;
+//}
 
 
 
