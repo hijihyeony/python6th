@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <style>
+
+    body{
+        background-color:lightpink;
+    }
+
+    .list-group-item {
+      display: flex;
+      justify-content: space-between;
+      background-color: lightyellow;
+      font-size: 20px;
+    }
+
+    /*완료 누르면 줄긋기*/
+    .list-group-item.completed span {
+      text-decoration: line-through;
+    }
+
+
+    /*날짜 글자*/
+    .todo-date {
+      font-size: 20px;
+      color: gray;
+    }
+  </style>
+</head>
+
+
+<body>
+    <main>
+      <section class="container">
+        <h1 class="mt-4">Todo List <span id="current-date" class="todo-date ml-3"></span></h1>
+        <form id="todo-form">
+          <div class="input-group mt-3 mb-3">
+            <input type="text" class="form-control" id="todo-input" placeholder="할 일을 입력하세요">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-primary">추가</button>
+            </div>
+          </div>
+        </form>
+
+        <ul id="todo-list" class="list-group"></ul>
+        <button type="reset" class="btn btn-warning mt-3" onclick="resetTodoList()">모든 리스트 리셋</button>
+      </section>
+    </main>
+
+
+
+  <script>
+    // 현재 날짜 표시 함수
+    function CurrentDate() {
+        document.getElementById("current-date").innerHTML = new Date().toDateString();
+    }
+
+    // Todo 리스트 리셋 함수
+    function resetTodoList() {
+      console.log('Reset List!');
+      var todoList = document.getElementById("todo-list");
+      todoList.innerHTML = " ";
+      saveTodoList();
+    }
+
+    // Todo 리스트 저장 함수
+    function saveTodoList() {
+      var todoList = document.getElementById("todo-list");
+      var todoItems = todoList.innerHTML;
+      localStorage.setItem("todoItems", todoItems);
+    }
+
+    // Todo 리스트 아이템 추가 함수
+    function addTodoItem(text) {
+      var todoList = document.getElementById("todo-list");
+      var listItem = document.createElement("li");
+
+      listItem.className = "list-group-item";
+      listItem.innerHTML = `
+        <span>${text}</span>
+        <div>
+          <button type="button" class="btn btn-success" onclick="completeTodoItem(this)">완료</button>
+          <button type="button" class="btn btn-danger" onclick="deleteTodoItem(this)">삭제</button>
+        </div>
+      `;
+      todoList.appendChild(listItem);
+    }
+
+    // Todo 리스트 추가 이벤트
+    function addTodo(){
+  document.getElementById("todo-form").addEventListener("submit", function(event) {
+
+  var todoInput = document.getElementById("todo-input");
+  var todoText = todoInput.value;
+
+  if (todoText) {
+    addTodoItem(todoText);
+    saveTodoList();
+    todoInput.value = ""; // 입력 필드 초기화
+  }
+});
+}
+    // Todo 리스트 아이템 완료 함수
+    function completeTodoItem(button) {
+      var listItem = button.parentNode.parentNode;
+      listItem.classList.toggle("completed");
+<!--      ListItem 요소의 클래스 리스트에 "completed" 클래스가 없으면 completed 클래스를 설정-->
+<!--      있으면 completed 클래스가 해제됨-->
+      saveTodoList();
+    }
+
+    // Todo 리스트 아이템 삭제 함수
+    function deleteTodoItem(button) {
+      var listItem = button.parentNode.parentNode;
+      var todoList = listItem.parentNode;
+      todoList.removeChild(listItem);
+      saveTodoList();
+    }
+
+
+
+    // 저장된 Todo 리스트 불러오기 함수
+    function loadTodoList() {
+      var todoList = document.getElementById("todo-list");
+      var todoItems = localStorage.getItem("todoItems");
+      if (todoItems) {
+        todoList.innerHTML = todoItems;
+      }
+    }
+
+
+    addTodo();
+    loadTodoList();
+    CurrentDate();
+
+
+  </script>
+</body>
+</html>
+
